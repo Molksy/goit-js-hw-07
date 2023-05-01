@@ -18,7 +18,7 @@ galleryItems.map(({ preview, original, description }) => {
   galleryRef.innerHTML += liEl;
 })
 
-galleryRef.addEventListener('click', onClickImg);
+document.addEventListener('click', onClickImg);
 
 function onClickImg(event) {
   event.preventDefault()
@@ -29,7 +29,7 @@ function onClickImg(event) {
     <img src="${event.target.dataset.source}" width="800" height="600">
 `);
   instance.show();
-  galleryRef.addEventListener('keydown', onClickModalClose);
+  document.addEventListener('keydown', onClickModalClose);
   
   function onClickModalClose(event) {
     if (event.code === "Escape") {
